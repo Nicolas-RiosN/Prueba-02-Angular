@@ -49,7 +49,6 @@ export class LoginComponent {
   fakeLoading(){
     this.loading = true;
     setTimeout(() => {
-
       this.router.navigate(['dashboard'])
     }, 1500)
   }
