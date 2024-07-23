@@ -2,9 +2,7 @@
     <mat-drawer-container class="example-container"  mode="side">
         <mat-drawer [opened]="false" #drawer class="sidenav-container" mode="push">
           <mat-nav-list class="app-sidenav">
-            <a  mat-list-item routerLink="/dashboard">Dashboard</a>
-            <a  mat-list-item routerLink="/dashboard/alumno">Alumnos</a>
-            <a  mat-list-item routerLink="/dashboard/reportes">Reportes</a>
+            <a  mat-list-item *ngFor="let item of menu" [routerLink]="item.redirect">{{ item.nombre }}</a>
           </mat-nav-list>
         </mat-drawer>
     
